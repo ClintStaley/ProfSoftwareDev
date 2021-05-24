@@ -6,7 +6,8 @@
 ## Follow instructions in Startup.md from site
  1. Almost all codebases have such docs
  2. Configuration is often a multiday, multi-hassle process.  Be patient
- 3. The docs are almost always slightly out of date due to fast evolution of the project. 
+ 3. The docs are almost always slightly out of date due to fast evolution of the project.
+	1. Modify them, with OK from team, as needed.  Leave a better doc than you found.
  4. Practical hints:
 	 1. Don't be intimidated; this is hard for everyone
 	 2. Try to understand *why* you are doing things rather than just following commands.  Helps debugging.
