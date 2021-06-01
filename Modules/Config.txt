@@ -23,4 +23,11 @@ Module CodeReading 02CodeReading N/A N/A
   Topic Principles 0Principles 10
     Segment 6/1 10 nl end
   end
+  Topic Documentation 1TechWriting 10
+     Segment 6/1 10 nl end
+     Segment 6/1 10 nl end
+     Segment 6/1 10 nl 
+        Dings.html Writing Dings
+     end
+  end
 end

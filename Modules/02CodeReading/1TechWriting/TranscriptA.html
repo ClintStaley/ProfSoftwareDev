@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.3.5.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-06-01T14:05:43.680000000"/>
+	<style type="text/css">
+		h1 { margin-top: 0in; margin-bottom: 0in; text-align: center }
+		p { margin-bottom: 0.2in; page-break-before: auto; page-break-after: auto }
+		p.western { font-size: 11pt }
+		h3 { margin-top: 0.17in; margin-bottom: 0.1in }
+		h3.western { font-family: "Albany", sans-serif }
+		h3.cjk { font-family: "HG Mincho Light J" }
+		h3.ctl { font-family: "Arial Unicode MS" }
+		pre.western { font-size: 9pt }
+		pre.cjk { font-family: "NSimSun", monospace }
+		a:link { color: #0000ff }
+		a:visited { color: #800080 }
+	</style>
+</head>
+<body lang="en-US" link="#0000ff" vlink="#800080" dir="ltr"><h1 style="margin-bottom: 0.2in">
+Terminology</h1>
+<p class="western" align="center" style="line-height: 115%"><font size="2" style="font-size: 9pt">Clinton
+A Staley</font></p>
+<p class="western" align="center" style="margin-bottom: 0in; page-break-before: auto; page-break-after: auto">
+<font size="2" style="font-size: 9pt">Copyright 2012, Software
+Inventions, Inc</font></p>
+<h3 class="western">Overview</h3>
+<p class="western">The way you choose and use terms makes a big
+difference in documentation. There are a great many different, and
+abstract, ideas to keep track of in STEM subjects, and having terms
+to hang them on helps.</p>
+<h3 class="western">Coin Terms</h3>
+<p class="western">When there's a standard term for an idea, use it
+of course. But, even if there's not, it's often worthwhile to make
+one up and use it. Having a term for an idea lends it clarity, and of
+course makes it easier to talk about. 
+</p>
+<p class="western">A classic example in my own lecturing is the use
+of the term &ldquo;target&rdquo; for the variable to which a pointer
+points. There's no field-wide term for this, so I made one up. Being
+able to refer to the pointer and the target as two separate entities,
+each with their own terms, reinforces their distinctness better than
+you could just referring to the pointer and &ldquo;what the pointer
+points to&rdquo;. (And of course repeating that cumbersome phrase
+gets tiresome quickly.)</p>
+<p class="western">Another example is the term &ldquo;context object&rdquo;
+for the object pointed to by <i>this</i><span style="font-variant: normal">
+</span><span style="font-variant: normal"><span style="font-style: normal">in
+an instance method call. Again, this is a coined term; there's no
+field-wide term for the idea. But, it's an important idea, and one
+often misunderstood by beginning OO programmers. Having a term for it
+both makes it easier to discuss, and also makes it hard to ignore,
+which beginning or weaker OO programmers are otherwise inclined to
+do.</span></span></p>
+<h3 class="western">Consistency of Terms</h3>
+<p class="western">Be sure to use terms consistently. It's easy to
+slip between calling something a function or a method, or blur the
+distinction between object and class in casual discussion. Always use
+exactly the right term, and the same term for the same idea. And
+insist that your student does too. Don't let someone get by with
+saying &ldquo;I allocate this class here&rdquo; or &ldquo;This array
+index contains a 10&rdquo;. One allocates <i>objects</i>, not
+classes, and it is array <i>elements</i> that may contain values.</p>
+<h3 class="western">Vivid Terms and Metaphors</h3>
+<p class="western">If you coin a term, choose it carefully, with an
+eye toward something punchy and visual, that will stick in the
+student's mind. For instance, for the thing a pointer points to, I
+used &ldquo;referent&rdquo; instead of &ldquo;target&rdquo; for
+years. Referent is correct; it's what the pointer refers to. But it's
+boring, and nonvisual. Target has more punch, evokes the visual
+picture of the pointer shooting at something, and is a lot easier to
+remember. 
+</p>
+<p class="western">It would be nice to have something equally good
+for &ldquo;context object&rdquo; &ndash; suggestions invited.</p>
+<p class="western">While we're at it, vivid metaphors in general help
+make concepts clear and memorable. In theory classes, I refer to an
+NFA as &ldquo;God's supercomputer&rdquo;. When discussing the dangers
+of global variables, I refer to them as variables with a bullseye on
+their forehead (&ldquo;Please, anyone, modify me!&rdquo;). When
+talking about the value of rewriting buggy sections of code, I use a
+metaphor involving cockroaches, and taking out the garbage, etc. It
+can be a little corny, perhaps, but it stays in people's minds, and
+that's the point.</p>
+<h3 class="western">Clear Variable Names in Sample Code</h3>
+<p class="western">A final term-related idea. If you write sample
+code to illustrate an idea, think carefully about how you name the
+variables. As an example, here is code for the KMP string matching
+algorithm, with variable names typical of a leading algorithms text:</p>
+<pre class="western"><font color="#000000">   </font><font color="#7f0055"><b>static</b></font><font color="#000000"> </font><font color="#7f0055"><b>public</b></font><font color="#000000"> List&lt;Integer&gt; kmpMatch(</font><font color="#7f0055"><b>char</b></font><font color="#000000">[] P, </font><font color="#7f0055"><b>char</b></font><font color="#000000">[] T) {</font>
+<font color="#000000">      </font><font color="#7f0055"><b>int</b></font><font color="#000000">[] p = </font><font color="#000000"><i>computepi</i></font><font color="#000000">(P);</font>
+<font color="#000000">      </font><font color="#7f0055"><b>int</b></font><font color="#000000"> i, q;</font>
+<font color="#000000">      List&lt;Integer&gt; s = </font><font color="#7f0055"><b>new</b></font><font color="#000000"> LinkedList&lt;Integer&gt;();</font>
+
+      q = 0;
+<font color="#000000">      </font><font color="#7f0055"><b>for</b></font><font color="#000000"> (i = 0; i &lt; T.</font><font color="#0000c0">length</font><font color="#000000">; i++) {</font>
+<font color="#000000">         </font><font color="#7f0055"><b>while</b></font><font color="#000000"> (P[q] != T[i] &amp;&amp; q &gt; 0)</font>
+            q = p[q];
+
+<font color="#000000">         </font><font color="#7f0055"><b>if</b></font><font color="#000000"> (P[q] == T[i])</font>
+            q++;
+
+<font color="#000000">         </font><font color="#7f0055"><b>if</b></font><font color="#000000"> (q == P.</font><font color="#0000c0">length</font><font color="#000000">) {</font>
+            s.add(i - q+1);
+            q = 0;
+         }
+      }
+
+<font color="#000000">      </font><font color="#7f0055"><b>return</b></font><font color="#000000"> s;</font>
+   }</pre><p class="western">
+And here is one I'd use for lecturing on the subject. You may not
+know this algorithm, but I bet you'd rather learn it from the latter
+than the former example.</p>
+<pre class="western"><font color="#000000">   </font><font color="#7f0055"><b>static</b></font><font color="#000000"> </font><font color="#7f0055"><b>public</b></font><font color="#000000"> List&lt;Integer&gt; kmpMatch(</font><font color="#7f0055"><b>char</b></font><font color="#000000">[] pattern, </font><font color="#7f0055"><b>char</b></font><font color="#000000">[] text) {</font>
+<font color="#000000">      </font><font color="#7f0055"><b>int</b></font><font color="#000000">[] pi = </font><font color="#000000"><i>computePi</i></font><font color="#000000">(pattern);</font>
+<font color="#000000">      </font><font color="#7f0055"><b>int</b></font><font color="#000000"> nextChar, prefixLength;</font>
+<font color="#000000">      List&lt;Integer&gt; matchLocs = </font><font color="#7f0055"><b>new</b></font><font color="#000000"> LinkedList&lt;Integer&gt;();</font>
+
+      prefixLength = 0;
+<font color="#000000">      </font><font color="#7f0055"><b>for</b></font><font color="#000000"> (nextChar = 0; nextChar &lt; text.</font><font color="#0000c0">length</font><font color="#000000">; nextChar++) {</font>
+<font color="#000000">         </font><font color="#7f0055"><b>while</b></font><font color="#000000"> (pattern[prefixLength] != text[nextChar] &amp;&amp; prefixLength &gt; 0)</font>
+            prefixLength = pi[prefixLength];
+
+<font color="#000000">         </font><font color="#7f0055"><b>if</b></font><font color="#000000"> (pattern[prefixLength] == text[nextChar])</font>
+            prefixLength++;
+
+<font color="#000000">         </font><font color="#7f0055"><b>if</b></font><font color="#000000"> (prefixLength == pattern.</font><font color="#0000c0">length</font><font color="#000000">) {</font>
+            matchLocs.add(nextChar - prefixLength+1);
+            prefixLength = 0;
+         }
+      }
+
+<font color="#000000">      </font><font color="#7f0055"><b>return</b></font><font color="#000000"> matchLocs;</font>
+   }</pre>
+</body>
+</html>

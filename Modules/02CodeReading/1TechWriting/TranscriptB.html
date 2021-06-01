@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.3.5.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-06-01T14:06:37.944000000"/>
+	<style type="text/css">
+		h1 { margin-top: 0in; margin-bottom: 0in; text-align: center }
+		p { margin-bottom: 0.2in; page-break-before: auto; page-break-after: auto }
+		p.western { font-size: 11pt }
+		h2.cjk { font-family: "SimSun" }
+		h2.ctl { font-family: "Mangal" }
+		a:link { color: #0000ff }
+		a:visited { color: #800080 }
+	</style>
+</head>
+<body lang="en-US" link="#0000ff" vlink="#800080" dir="ltr"><h1 style="margin-bottom: 0.2in">
+Sequencing</h1>
+<p class="western" align="center" style="line-height: 115%"><font size="2" style="font-size: 9pt">Clinton
+A Staley</font></p>
+<p class="western" align="center" style="margin-bottom: 0in; page-break-before: auto; page-break-after: auto">
+<font size="2" style="font-size: 9pt">Copyright 2012, Software
+Inventions, Inc</font></p>
+<h2 class="western">Overview</h2>
+<p class="western">The order in which you explain a series of
+concepts is essential to clarity. We've already seen this in some
+forms, e.g. concrete before abstract. But it's an important principle
+in its own right. STEM subjects are full of prerequisites; if you
+drew a prerequisite graph of topics in a STEM area it would have all
+sorts of &ldquo;this must come before that&rdquo; arrows in it, and
+there would be only a few, or sometimes just one, sequence that
+respected all the arrows.</p>
+<p class="western">By contrast, humanities topics are more relaxed
+about prerequisites. For example, one popular and effective way to
+teach history is to start with current events, then discuss the
+decade prior to the current one, then the decade before that, working
+<i>backwards</i><span style="font-variant: normal"> </span><span style="font-variant: normal"><span style="font-style: normal">through
+history because it's more compelling to view each period as a lead-in
+to a period you already understand. Try doing that with physics:
+&ldquo;We'll start with quantum electrodynamics and work our way back
+to basic kinematics.&rdquo;</span></span></p>
+<h2 class="western">An Example</h2>
+<p class="western">I recently set up a series of lectures in a C
+class preparatory to an LZW compression project. The project requires
+packing smaller integer values of a few bits into larger 32-bit
+integers as tightly as possible, eventually writing the 32-bit
+integers to a binary file. So, I needed to explain C's bitwise
+operations in detail. I could assume students knew only 101 level C
+concepts, since for many the last C class they had was 101. These
+include ints (but no other variations on int except chars used for
+ASCII values), textual file I/O, arrays, structs, loops, ifs,
+functions and parameters, but not much else.</p>
+<p class="western"><b>In-lecture question:</b></p>
+<p class="western" style="font-weight: normal">Before you read
+further, think about what prerequisite concepts, aside from the
+assumed 101 background in C, would be needed just to explain bitwise
+operators, and in what order they should be presented before getting
+into bitwise operators themselves.</p>
+<p class="western"><b>In-lecture answer:</b></p>
+<p class="western" style="font-weight: normal">I came up with this
+list: 
+</p>
+<ul>
+	<li><p class="western" style="font-weight: normal">unsigned vs
+	signed integers (needed to fully understand shifting)</p>
+	<li><p class="western" style="font-weight: normal">binary counting
+	(to associate bit patterns with integer values)</p>
+	<li><p class="western" style="font-weight: normal">hexadecimal
+	notation (to be able to readily express bit patterns in bitwise op
+	examples)</p>
+	<li><p class="western" style="font-weight: normal">Vagaries of
+	printf and scanf wrt unsigned ints (so I could read and write
+	unsigned values)</p>
+</ul>
+<p class="western" style="font-weight: normal">You may have come up
+with others, as well. And, note that even these must go in a certain
+sequence. Binary counting comes before hex notation, for instance.</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<h2 class="western">Pedagogical Sequence != Conceptual Grouping</h2>
+<p class="western">A common trap is to sequence concepts in the order
+they relate to one another <b>conceptually</b> instead of
+pedagogically. (The abstract-first mistake is one example of this.)
+For instance, one sees programming books that start with detailed
+discussions of variables and operators, then move on to control
+structures, then perhaps functions. But, this is not good pedagogy &ndash;
+a student doesn't need to understand all about variables before doing
+control structures, just enough to write some sensible code. And a
+full understanding of variables involves some deep ideas Deeper
+discussions on variables and operators can wait till later. Even
+within, say, a discussion on loops, covering a while and perhaps
+for-loop is enough for starters, and then later one might add
+do-while, while(1)/break, etc. Grouping all the loop concepts just
+because they &ldquo;go together&rdquo; isn't good teaching. You need
+the order that is most compelling and easiest to understand, not
+necessarily the conceptually natural order.</p>
+<p class="western">Another good example: some professors like to
+introduce writing functions early on in a 101 class, because they are
+so central to programming. There are varying opinions on this, but I
+defer functions to much later because they are hard to understand.
+(See attached exercise.)</p>
+<p class="western">The &ldquo;pedagogical sequence&rdquo; is the
+order of explanation that:</p>
+<ul>
+	<li><p class="western">Respects prerequisites: explains supporting
+	concepts before the concepts that depend upon them</p>
+	<li><p class="western">Has the most gradual ramp: sequences concepts
+	in progressive order of difficulty, leaving hardest concepts till
+	the end.</p>
+</ul>
+<p class="western">Any conceptual area usually has both easier and
+harder concepts in it (e.g. ints and doubles are simple enough, but
+the distinction between unsigned shorts and signed longs is harder).
+And usually only a subset of the concepts are needed early on as
+prerequisites (ints and doubles). So, conceptual groups rarely make a
+good pedagogical sequence.</p>
+<h2 class="western" style="font-variant: normal; font-style: normal">It's
+OK to Punt (temporarily)</h2>
+<p class="western"><span style="font-variant: normal"><span style="font-style: normal">Sometimes
+you need to pass on explaining an idea, while still assuming its
+consequences. For instance, when you get to strings in a 101 class,
+there's a case where scanf doesn't need the &amp;, but it's way too
+early to explain pointers. So, you just say &ldquo;take it on faith
+for now &ndash; no &amp; when you pass a string to scanf&rdquo;, and
+make a promise to explain in more detail later. That promise is
+important; you want to make it clear that the student doesn't need to
+understand the &ldquo;why&rdquo; just yet in the sequence, just the
+&ldquo;what&rdquo;, and that the &ldquo;why&rdquo; will come later
+on.</span></span></p>
+</body>
+</html>
