@@ -14,6 +14,8 @@
 
  1. Ask questions of experienced people where necessary, but be as self-sufficient as you can without wasting time.  Group your questions when possible.
 
+ 1. Use existing design docs, but only if they are really up to date.
+
  1. Create a sandbox code branch, and *tinker* with the code, changing small bits here and there to see what effect it has.  Tinkering is fine as long as you are sure not to commit your experiments to the master branch.
    1. This can confirm your understanding of the code, and give you confidence.
    1. It can also uncover misunderstandings you have of the code, and make you rethink.

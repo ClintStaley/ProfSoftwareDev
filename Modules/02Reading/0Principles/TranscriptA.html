@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TranscriptA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* Markdown.css */
+/* Authors: Kevin Burke: http://kev.inburke.com/, modified by Evan Wondrasek  */
+/* https://bitbucket.org/kevinburke/markdowncss */
+
+body{
+    margin: 0 auto;
+    font-family: Georgia, Palatino, serif;
+    color: #444444;
+    line-height: 1;
+    max-width: 960px;
+    padding: 5px;
+}
+
+fix {
+   color: #FF0000;
+}
+
+Answer, Answer code, Answer pre {
+   font-size: 5pt;
+}
+
+slide {
+   font-size: 1.25em;
+   color: #44F;
+}
+
+sl {
+   font-size: 1.25em;
+   color: #44F;
+}
+
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 16px;
+    padding: 0;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 22px;
+    margin: 20px 0 6px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+a:visited {
+    color: purple;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+    margin-left: 44px;
+}
+li ul, li ul {
+    margin-left: 24px;
+}
+p, ul, ol {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 540px;
+}
+pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+}
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 2em;
+    margin-left:0;
+    max-width: 476px;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {  
+    color: #666;
+    max-width: 460px;
+}
+hr {
+    width: 540px;
+    text-align: left;
+    margin: 0 auto 0 0;
+    color: #999;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+  display: inline-block;
+  width: 210px;
+  padding: 4px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+select, input[type=file] {
+  height: 27px;
+  line-height: 27px;
+}
+textarea {
+  height: auto;
+}
+
+/* grey out placeholders */
+:-moz-placeholder {
+  color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 4px 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #004b9a;
+  border-bottom-color: #003f81;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  color: #fff;
+  background-position: 0 -15px;
+  text-decoration: none;
+}
+button:active {
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+
+</style>
+</head>
+<body>
+<h1>Reading Code</h1>
+<h2>Overview</h2>
+<ol>
+<li>
+<p>Your first job will involve much more code reading than code writing.  Find/fix a bug, make a 10-line feature improvement in a 10,000 line module, etc.</p>
+</li>
+<li>
+<p>Code reading is a different skill from code writing, with its own goals and methods.</p>
+</li>
+<li>
+<p>An exercise in code-file rewriting demonstrates that perhaps 90% of the value in a source file is the full comprehension of it by its current maintainers.  You are redeveloping that full comprehension.</p>
+</li>
+</ol>
+<h2>Methods</h2>
+<ol>
+<li>
+<p>Understand incrementally.  It took days to write; it's OK for you not to understand it all instantly.</p>
+</li>
+<li>
+<p>Pick a reasonable balance between exploring the code top-down (starting with a high level or main function and drilling down) and bottom-up (examining line-by-line the code for leaf functions first, and moving up the call tree).  The former generally gets you big-picture feel, and an overall impression, but the latter is needed to truly understand how the code works.</p>
+</li>
+<li>
+<p>Ask questions of experienced people where necessary, but be as self-sufficient as you can without wasting time.  Group your questions when possible.</p>
+</li>
+<li>
+<p>Use existing design docs, but only if they are really up to date.</p>
+</li>
+<li>
+<p>Create a sandbox code branch, and <em>tinker</em> with the code, changing small bits here and there to see what effect it has.  Tinkering is fine as long as you are sure not to commit your experiments to the master branch.</p>
+<ol>
+<li>This can confirm your understanding of the code, and give you confidence.</li>
+<li>It can also uncover misunderstandings you have of the code, and make you rethink.</li>
+<li>It may be useful to deliberately (temporarily) introduce bugs to confirm your understanding.</li>
+</ol>
+</li>
+<li>
+<p>Don't settle for an impressionistic overview.  You should be able to confidently say what will happen with small changes to the code, and why each value/variable/assignment/if-statement is needed.  After all, that's the level of understanding the original author had, and is needed to debug/improve the code.</p>
+<ol>
+<li>Place debug outputs (e.g. console.log or printf) at strategic points and see if you can correctly predict their output.</li>
+<li>Pay special attention to core data structures that are at the heart of classes/modules.  The meaning of each member datum, for instance, should be clearly documented.  (If it's not, as will sadly be true in cases, then add documentation yourself.)</li>
+<li>Pay attention to fine issues like off-by-one rules, e.g &quot;Is pIdx the index of the next element to be processed, or the last element that was processed?&quot;)</li>
+<li>Read comments, but be skeptical, too.  Comments can be poorly written, or out of date.</li>
+</ol>
+</li>
+<li>
+<p>Ask &quot;why&quot; questions; don't settle for &quot;what&quot; answers.</p>
+<ol>
+<li>Remembering every detail of what code does is hard, and boring. (&quot;Is that variable preincremented or postincremented?  Where was that member datum updated, again?&quot;)</li>
+<li>Understanding <em>why</em> something was done is more interesting, and one good &quot;why&quot; often subsumes a great many &quot;what&quot;s.  (&quot;Oh, they made the getDerivedStateFromProps method static to accommodate async renders, and <em>that's</em> why all the other methods it calls are also static.&quot;)</li>
+<li>Understanding <em>why</em> informs future modifications and bug fixes.  (&quot;The whole state-update thing has to be static, relying only on parameters and not member data like props&quot;)</li>
+</ol>
+</li>
+<li>
+<p>Clarify the code where useful.</p>
+<ol>
+<li>This includes adding brief comments, adjusting variable names for clarity, and simple reorganizations that make the intent clearer.</li>
+<li>Doing so will reinforce your understanding, and adds value.</li>
+<li>Your perspective as a &quot;newbie&quot; to the code makes you especially aware of where the code could be clearer.</li>
+</ol>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

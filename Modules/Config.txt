@@ -1,0 +1,20 @@
+Professional Software Dev
+Modules
+
+Module Setup 00Setup N/A N/A
+  Topic CodeBase 0CodeBase 10
+    Segment 5/31 10 nl end
+  end
+  Topic ProfStudy 1ProfessionalStudy 10 
+    Segment 5/31 10 nl end
+  end
+end
+
+Module BuildTools 01BuildTools N/A N/A
+  Topic Principles 0Principles 10
+    Segment 6/1 10 nl end
+  end
+  Topic Maven 1Maven 10 
+    Segment 6/1 10 nl end
+  end
+end
