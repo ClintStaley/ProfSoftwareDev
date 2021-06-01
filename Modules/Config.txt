@@ -18,3 +18,9 @@ Module BuildTools 01BuildTools N/A N/A
     Segment 6/1 10 nl end
   end
 end
+
+Module CodeReading 02CodeReading N/A N/A
+  Topic Principles 0Principles 10
+    Segment 6/1 10 nl end
+  end
+end
