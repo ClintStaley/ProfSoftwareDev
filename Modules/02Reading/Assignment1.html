@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-05-27T14:24:51.286618049"/>
+	<meta name="created" content="00:00:00">
+	<meta name="created" content="00:00:00">
+	<meta name="created" content="00:00:00">
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115% }
+		pre.cjk { font-family: "DejaVu Sans Mono", monospace }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<pre class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>Code Reading Assignment</b></font></font>
+
+<font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">Read carefully the code for BounceSVGView and BounceMovie, and also review the React Components MovieController, Bounce, and SbmPage.    Answer these questions regarding BounceSVGView:</font></font></pre>
+<ol>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">What does the view show as a result of getInitState, before the first setOffset call?</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">Why are the loops mutually exclusive as the comment on 172 indicates?  How can we be sure both won't get run?</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">What is the purpose of a &lt;g&gt; tag?</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">Why are all the &quot;key&quot; values in there?  How do they affect React behavior?</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">Why is line 141 a preincrement while line 176 is a postdecrement?  Would it matter if we changed these?</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">For a typical BounceMovie, what length might svgElms have at most?</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">What does the special &lt;circle&gt; tag on lines 216-218 accomplish?  Why isn't it just set in setOffset?  (A hint: Does that &lt;circle&gt; tag need to appear in a specific position in the array?)</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">What is with the text vs rhsText settings on lines 94-95?  What does that accomplish exactly?</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">Why are all the methods makeLabeledRect, getDerivedStateFromProps, getInitState and getLabel static?  How do these methods even get called, and when? (Start with getDerivedStateFromProps and getLabel)</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">Why do the barrier and target creation events happen at negative time?  Why not 0 time?  (A hint: Consider the flow of the time setting, as you scrub forward and back.  Are other events also likely to be at 0 time?)</font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">If I simply play a BounceMovie through straight, roughly how many time(s) might I expect line 151, creating a &lt;circle&gt; tag, to run?  Is this affected by the frequency of render calls?  If so, how?  If not, then what, if any, parameter affects the number of times line 151 is called?</font></font></pre>
+	<li/>
+<p style="margin-bottom: 0.2in; line-height: 100%"><font color="#000000"><span style="background: #ffffff">
+	<font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">Consider
+	the trgEvts array:</span></span></font></font></font></p>
+	<ol>
+		<li/>
+<p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">What
+		does the </span></span></font><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">trgEvts</span></span></font><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">
+		array do in general?  </span></span></font></font></font>
+		</p>
+		<li/>
+<p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">How
+		many elements does it have?  Is the number the same throughout the
+		movie?  </span></span></font></font></font>
+		</p>
+		<li/>
+<p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">Do
+		the elements' values change during the movie?</span></span></font></font></font></p>
+		<li/>
+<p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">What
+		special property do its elements have?  What object is pointed to
+		by that property?  Does that property's value change as the movie
+		is played back and forth?</span></span></font></font></font></p>
+	</ol>
+</ol>
+</body>
+</html>
