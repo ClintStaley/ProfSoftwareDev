@@ -19,12 +19,8 @@ Module BuildTools 01BuildTools N/A N/A
   end
   Topic WebPack 2WebPack 10
     Segment 6/7 10 nl 
-       minipack/src/minipack.js  Minipack Source
-       minipack/example/entry.js entry.js example code
-       minipack/example/message.js message.js example code
-       minipack/example/name.js name.js example code
-       minipack/bundle.js Bundled output
-       webpack-demo/webpack-demo.zip Zip for WebPack demo
+       minipack.zip Minipack zip
+       webpack-demo.zip Zip for WebPack demo
     end
 end
 
