@@ -5,7 +5,8 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
 	<meta name="created" content="00:00:00"/>
-	<meta name="changed" content="2021-05-27T14:24:51.286618049"/>
+	<meta name="changed" content="2021-06-04T14:11:06.538482846"/>
+	<meta name="created" content="00:00:00">
 	<meta name="created" content="00:00:00">
 	<meta name="created" content="00:00:00">
 	<meta name="created" content="00:00:00">
@@ -43,28 +44,32 @@
 	<li/>
 <pre class="western" style="margin-bottom: 0.2in"><font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">If I simply play a BounceMovie through straight, roughly how many time(s) might I expect line 151, creating a &lt;circle&gt; tag, to run?  Is this affected by the frequency of render calls?  If so, how?  If not, then what, if any, parameter affects the number of times line 151 is called?</font></font></pre>
 	<li/>
-<p style="margin-bottom: 0.2in; line-height: 100%"><font color="#000000"><span style="background: #ffffff">
-	<font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="font-weight: normal">Consider
-	the trgEvts array:</span></span></font></font></font></p>
+<p style="margin-bottom: 0.2in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">Consider
+	the trgEvts array:</span></font></font></font></p>
 	<ol>
 		<li/>
 <p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">What
-		does the </span></span></font><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">trgEvts</span></span></font><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">
-		array do in general?  </span></span></font></font></font>
+		does the trgEvts</span></span></font><font color="#000000"><span style="background: #ffffff">
+		</span></font><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">array
+		do in general? </span></span></font></font></font>
 		</p>
 		<li/>
-<p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">How
-		many elements does it have?  Is the number the same throughout the
-		movie?  </span></span></font></font></font>
+<p style="margin-bottom: 0.2in; font-weight: normal; line-height: 100%">
+		<font color="#000000"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">How
+		many elements does trgEvts have? Is the number the same throughout
+		the movie? </span></font></font></font>
 		</p>
 		<li/>
-<p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">Do
-		the elements' values change during the movie?</span></span></font></font></font></p>
+<p style="margin-bottom: 0.2in; font-weight: normal; line-height: 100%">
+		<font color="#000000"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">Do
+		trgEvt's elements' values change during the movie?</span></font></font></font></p>
 		<li/>
-<p style="margin-bottom: 0.2in; line-height: 100%"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><font color="#000000"><span style="font-weight: normal"><span style="background: #ffffff">What
-		special property do its elements have?  What object is pointed to
-		by that property?  Does that property's value change as the movie
-		is played back and forth?</span></span></font></font></font></p>
+<p style="margin-bottom: 0.2in; font-weight: normal; line-height: 100%">
+		<font color="#000000"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">What
+		special property do the elements of trgEvts have (added during
+		movie play)? What object is pointed to by that property? Does that
+		property's value change as the movie is played back and forth?</span></font></font></font></p>
 	</ol>
 </ol>
 </body>

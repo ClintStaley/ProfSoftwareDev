@@ -17,6 +17,15 @@ Module BuildTools 01BuildTools N/A N/A
   Topic Maven 1Maven 10 
     Segment 6/1 10 nl end
   end
+  Topic WebPack 2WebPack 10
+    Segment 6/7 10 nl 
+       minipack/src/minipack.js  Minipack Source
+       minipack/example/entry.js entry.js example code
+       minipack/example/message.js message.js example code
+       minipack/example/name.js name.js example code
+       minipack/bundle.js Bundled output
+       webpack-demo/webpack-demo.zip Zip for WebPack demo
+    end
 end
 
 Module CodeReading 02CodeReading N/A N/A
