@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-06-04T03:32:45.412708626"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115% }
+		pre.cjk { font-family: "DejaVu Sans Mono", monospace }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<pre class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>Code Reading Assignment</b></font></font>
+
+<font face="Liberation Serif, serif"><font size="2" style="font-size: 11pt">Review api.js, actionCreators.js, and the reducers, and do the following exercises</font></font></pre>
+<ol>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in; font-weight: normal"><font color="#000000"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">Change actionCreators.postTeam and api.postTeam so that api.postTeam automatically returns the full data for the posted Team, including the mmbs and cmpId, instead of returning just an id, with the actionCreators.postTeam &quot;faking&quot; the team contents.  And, importantly, api.postTeam does this by a pair of REST GET calls.  Similarly, fix postMmb, postCmp, and postSbm so they honor point 4 of the main comment in api.js</span></font></font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in; font-weight: normal"><font color="#000000"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">Factor the JSON.stringify into put and post so that only two such calls appear in all of api.js, and no Object.assign calls.</span></font></font></font></pre>
+	<li/>
+<pre class="western" style="margin-bottom: 0.2in; font-weight: normal"><font color="#000000"><font face="Droid Sans Mono, monospace, monospace, Droid Sans Fallback"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">The cmps.js reducer could use some cleanup.  Eliminate needless variables, replace Object.assign calls with ES6 notation, tighten up GET_CMP_TEAMS.  Move the default [] assignment of cmpTeams out of actionCreators.js into cmps.js.</span></font></font></font></pre>
+</ol>
+</body>
+</html>
