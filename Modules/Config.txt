@@ -22,6 +22,7 @@ Module BuildTools 01BuildTools N/A N/A
        minipack.zip Minipack zip
        webpack-demo.zip Zip for WebPack demo
     end
+  end
 end
 
 Module CodeReading 02CodeReading N/A N/A
