@@ -1,44 +1,76 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<title></title>
-	<meta name="generator" content="LibreOffice 6.3.5.2 (Windows)"/>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
 	<meta name="created" content="2021-05-25T02:34:06.369766134"/>
-	<meta name="changed" content="2021-06-09T02:53:12.368000000"/>
+	<meta name="changed" content="2021-06-09T13:18:09.955614117"/>
 	<style type="text/css">
 		@page { margin: 0.79in }
 		p { margin-bottom: 0.1in; line-height: 115% }
+		h2.western { font-family: "Albany", sans-serif; font-size: 16pt }
+		h2.cjk { font-family: "Noto Sans CJK SC"; font-size: 14pt }
+		h2.ctl { font-family: "Lohit Devanagari"; font-size: 14pt }
 	</style>
 </head>
-<body lang="en-US" dir="ltr"><p style="margin-bottom: 0in; line-height: 100%">
-#Build Tools#</p>
+<body lang="en-US" dir="ltr">
+<h1>Build Tools Exercises</h1>
+<h2 class="western">Maven</h2>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Look up build
+	tools Ant and Gradle. How do they compare with Maven as far as what
+	they cover, and their ease of use?</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Check out the
+	main Maven repository at https://repo1.maven.org/maven2/  About how
+	many packages have &quot;commons&quot; as a prefix, for instance? 
+	How many people, roughly, contributed as developers to the junit
+	module?  How about just &quot;contributors&quot; (often people who
+	fix a small bug).  What contribution did SeriyBg make, for instance?</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Create a
+	Maven project from scratch, able to compile the provided Sample.java
+	file.  Submit the pom.xml file.</p>
+</ol>
+<h2 class="western">WebPack</h2>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Look up Sass,
+	an extension CSS language. Write a small Sass file as part of the
+	webpack-example, doing one example of CSS inheritance. Use it in the
+	app, and adjust webpack.config.js to load it properly. (Note that
+	Sass is server-side compiled.)</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Write a small
+	markdown file, include it in index.html, and display it as the
+	innerHTML of the main div. Here again, adjust webpack.config.js to
+	load the MD file.</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%">Look up
+	devtool options for webpack, and run a webpack with devtool
+	cheap-module-source-map.  Beautify the resultant bundle.js,
+	installing js-beautify if you haven't already.  Examine the 
+	bundle.js code, finding at least three lines that are designed for
+	DI.</p>
+</ol>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
-<p style="margin-bottom: 0in; line-height: 100%">1. Look up build
-tools Ant and Gradle. How do they compare with Maven as far as what
-they cover, and their ease of use?</p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%">2. Look up Sass, an
-extension CSS language.  Write a small Sass file as part of the
-webpack-example, doing one example of CSS inheritance.  Use it in the
-app, and adjust webpack.config.js to load it properly.  (Note that
-Sass is server-side compiled.)</p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%">3. Write a small
-markdown file, include it in index.html, and display it as the
-innerHTML of the main div.  Here again, adjust webpack.config.js to
-load the MD file.</p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
+<h2 class="western">Make</h2>
+<ol>
+	<li/>
+<p>Write a makefile that properly expresses dependencies for
+	the .c and .h files provided.  Provide two target executables: dev
+	and prod.  The former provides debugging flag -g and does not
+	optimize.  The latter omits -g and optimizes.  Test your makefile by
+	&quot;touch&quot;ing various .h and .c files and watching how it
+	rebuilds the project.  Submit this as myMakeFile.</p>
+	<li/>
+<p>Remove the header file dependency section from your
+	makefile, and instead read up on and use makedepend to generate the
+	header files.  Do you end up with the same dependencies?</p>
+</ol>
 </body>
 </html>
