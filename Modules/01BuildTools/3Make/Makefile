@@ -4,8 +4,8 @@
 
 # General definitions
 #CPP = clang++
-CPP = /usr/local/bin/g++
-CPPFLAGS = -std=c++11 -g -w -O3 -DLITTLE_ENDIAN
+CPP = g++
+CPPFLAGS = -std=c++11 -g -O3 -DLITTLE_ENDIAN
 LINKFLAGS = -static-libstdc++
 
 MANCALAOBJS = MancalaBoard.o MancalaMove.o MancalaView.o MancalaDlg.o
@@ -20,8 +20,6 @@ MINIMAXOBJS = MinimaxApp.o Steppable.o AIPlayer.o GameModel.o GameView.o HumanPl
 MinimaxApp : $(MINIMAXOBJS)
 	$(CPP) $(LINKFLAGS) $(MINIMAXOBJS) -o MinimaxApp
 
-BoardTest : $(BOARDTESTOBJS)
-	$(CPP) $(LINKFLAGS) $(BOARDTESTOBJS) -o BoardTest
 
 # Example .o/.cpp dependency
 MancalaBoard.o: MancalaBoard.cpp
@@ -31,20 +29,24 @@ MancalaBoard.o: MancalaBoard.cpp
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
+# Other target executable.  Use make <target> to choose which one make builds
+BoardTest : $(BOARDTESTOBJS)
+	$(CPP) $(LINKFLAGS) $(BOARDTESTOBJS) -o BoardTest
+
 # Examples of script-style release target
-BTRelease: BoardTest BoardTest.o
+BTRelease: BoardTest
 	chmod 755 BoardTest
-	chmod 644 BoardTest.o
 	mv BoardTest BoardTest.o ../../milestone1
+        touch BTRelease
 
 MMARelease: MinimaxApp
-	cp MinimaxApp Pylos.gbk ../../prj3
-	chmod 755 ../../prj3/MinimaxApp
-	chmod 644 ../../prj3/Pylos.gbk
+        chmod 755 MinimaxApp
+	cp MinimaxApp ../../prj3
+        touch MMARelease
 
 # Example of utility target
 clean:
-	rm BoardTest MyBoardTest *.o
+	rm BoardTest MinimaxApp *.o
 
 # Cpp/H file dependencies
 MancalaBoard.cpp: Class.h Board.h
@@ -85,16 +87,16 @@ CheckersDlg.cpp: CheckersBoard.h Dialog.h Class.h
 
 BoardTest.cpp: Board.h View.h Dialog.h
 
+# Generalized header file dependency
+%.cpp: %.h
+	touch $@
+
 # Dependencies of header files on one another.
 CheckersDlg.h OthelloDlg.h MancalaDlg.h PylosDlg.h: Dialog.h
 	touch MancalaDlg.h PylosDlg.h CheckersDlg.h OthelloDlg.h
 
 MancalaView.h PylosView.h OthelloView.h CheckersView.h : View.h
 	touch MancalaView.h PylosView.h OthelloView.h CheckersView.h
-
-# Generalized header file dependency
-%.cpp: %.h
-	touch $@
 
 
 # DO NOT DELETE
