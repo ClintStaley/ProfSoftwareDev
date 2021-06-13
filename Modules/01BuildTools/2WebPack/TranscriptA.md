@@ -30,6 +30,11 @@
    * Run build
       * Play with css file
 
+## Useful Links
+
+  * [WebPack Official Docs](https://webpack.js.org/concepts/)
+  * [Good Tutorial on WP5](https://dev.to/antonmelnyk/how-to-configure-webpack-from-scratch-for-a-basic-website-46a5)
+
 
 
 
