@@ -23,15 +23,6 @@ clean:
 main.c: module1.h module2.h
 	touch main.c
 
-module1.c: module1.h
-	touch module1.c
-
-module2.c: module2.h
-	touch module2.c
-
-module2.h: module1.h
-	touch module2.h
-
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 
 main.o: /usr/include/stdio.h /usr/include/math.h module1.h module2.h
