@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-06-30T02:07:34.005288259"/>
+	<style type="text/css">
+		p { margin-bottom: 0.2in; page-break-before: auto; page-break-after: auto }
+		p.western { font-size: 11pt }
+		h1 { margin-top: 0in; margin-bottom: 0in; text-align: center }
+		h3 { margin-top: 0.17in; margin-bottom: 0.1in }
+		h3.western { font-family: "Albany", sans-serif }
+		h3.cjk { font-family: "HG Mincho Light J" }
+		h3.ctl { font-family: "Arial Unicode MS" }
+		h5.western { font-family: "Albany", sans-serif; font-size: 11pt }
+		h5.cjk { font-family: "Noto Sans CJK SC"; font-size: 11pt }
+		h5.ctl { font-family: "Lohit Devanagari"; font-size: 11pt }
+		a:link { color: #0000ff }
+		a:visited { color: #800080 }
+	</style>
+</head>
+<body lang="en-US" link="#0000ff" vlink="#800080" dir="ltr">
+<h1 style="margin-bottom: 0.2in">Testing Overview</h1>
+<h3 class="western">Overview</h3>
+<p class="western">This segment covers ideas in software testing,
+including best practices, concepts, and vocabulary.</p>
+<h3 class="western">Testing is Important</h3>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">In
+academia, testing is often an afterthought, something you do to
+quickly check an assignment before submitting it, or as a requirement
+for a class.  In practice, it's a lot more important.  Good testers
+see testing as an art, and they’re right. They’re very
+enthusiastic about finding bugs. An SQA (Software Quality Assurance)
+group with good morale will be found on lunch breaks bragging about
+the clever way they made an application fail this morning and how
+upset the developers were over the rough treatment given to their
+baby.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Every
+quarter, I get students who maintain they’ve tested as thoroughly
+as possible, and my standard question is “If you were going to get
+$1000 for each new bug you find in the code, would you be building
+more tests, or still giving up?”  The answer is usually “Well, if
+there were $1000 at stake I’d test some more.”&nbsp;&nbsp;You
+haven’t really tested until you’ve done it so thoroughly that you
+wouldn’t bother to do more even if $1000 was at stake.  Indeed, the
+cost of a missed bug in practice can be far larger, especially if
+it's a security hole.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h3 class="western">Testing is Systematic</h3>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Testing
+is not just “beating at the code”.&nbsp;&nbsp;You need an
+organized plan.&nbsp;&nbsp;If the spec says “spaces are allowed
+anywhere in the move string except within words” your test plan
+should include systematically trying a space at every allowed point
+in the move string.&nbsp;&nbsp;If the spec gives a complex rule for
+comparing two objects then your plan should include systematic
+checking of every possible step in the comparison process.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><b>Read
+the spec</b></font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Missing
+a point in the spec is one of the most common errors, and one that
+cannot be checked any other way than by hand.  Go over the spec
+carefully when you design test cases.  As you cover each sentence or
+phrase in the spec, highlight it out on a printout, or keep an e-copy
+with strikeout marks on it. This will force you to consider each part
+of the spec and not skim over some essential portion of it.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Another
+good tip is to state the spec in negative form, and test as if you
+are verifying negative form.  “Spaces are allowed at any point”
+=&gt; “Spaces will result in an error at every point.”, and then
+you write your test to confirm that (which it of course should not be
+able to confirm unless there’s a bug).</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><b>Test
+user interaction</b></font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Testing
+the difficult logical portions of the program is useful, but  most
+bugs are simple things that are obvious once tested.  And a
+surprising number of bugs show up in I/O, whether it's parsing
+user-generated input like addresses or credit card numbers, or
+parsing file structures like jpegs or pdfs.  </font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><b>Test
+boundary conditions and odd cases</b></font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Situations
+that don’t arise easily are often buggy.  For instance, in a
+checkers-playing program from my 305 class, an important test case
+was a series of checkers jumps that ended with the jumping
+piece&nbsp;<i>returning to its original location</i>.&nbsp;&nbsp;This
+is really hard to make happen in checkers, but it can be done, and a
+lot of student programs failed on this. Many sophisticated programs
+have a few odd cases like this that you must deliberately design for.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><b>Aim
+for code coverage</b></font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">A
+surprising percentage of code that is shipped professionally
+has&nbsp;<i>never</i>&nbsp;been run.  Much of this code is in
+branches designed to handle exceptions, unusual cases such as
+zero-length input, etc.   An ideal test suite achieves <i>code
+coverage</i> -- it runs every line of the code.  We'll discuss code
+coverage and related concepts in a later segment. </font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h3 class="western">Testing is Automated</h3>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Software
+testing is technically exacting, repetitive, highly detailed work. 
+Do we have tools for such work?  Yep -- computers!  </font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">40
+years ago, software testing was often hand-done, by people following
+test scripts, which were documents describing what features to test
+and how.  This was boring, and also expensive to repeat.  In
+particular, hand-testing made it hard to do <i>regression testing</i>
+-- repeating existing tests after a software change to be sure that
+features that worked earlier have not been broken by the change (such
+a step backwards in reliability after a change is a &quot;regression&quot;).
+</font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">In
+a time when software releases required duplication of a million CDs
+in shrinkwrapped boxes, shipped to stores, new releases of software
+happened perhaps once annually, and an expensive regression testing
+process was liveable.  In a modern web-based software world, it's
+possible, and perfectly common, to release small changes to the
+software <i>daily</i>.  No CD's, no boxes -- just update the website.
+  This enables fast, incremental improvement of the product, but it
+also requires much more regression testing.   </font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">So,
+virtually all software testing in the 21st century is automated.  And
+SQA work <i>is</i> software development, not of the product itself
+but of the software that tests the product.  Some of this is actual
+coding, and some is installation and configuration of the huge
+variety of automated testing tools that have arisen in the past
+several decades. </font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h3 class="western" style="font-style: normal">Test Driven
+Development</h3>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Test
+Driven Development (TDD) is the practice of writing tests before you
+write the code itself.   It has become popular as part of agile or
+scrum development in the 21st century, and has several advantages. </font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">First,
+it makes you clarify the specification, and rely on it.  Lacking any
+code implementation for reference, the test writer must consult the
+spec.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Second,
+it raises awareness of spec issues, special cases, etc. before you
+write code.  This helps prevent the too-common error of incorrectly
+implementing the spec due to lack of attention to it.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Third,
+TDD provides an incremental, motivating, feedback loop during code
+development.  TDD tests usually take the form of many small unit
+tests.  TDD uses automated systems to run the unit tests as the
+software is developed, often displaying each unit test result as
+&quot;red&quot; (not working), or &quot;green&quot; (working
+correctly).   Code development steadily moves tests from red to
+green.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h5 class="western">Blackbox vs Whitebox</h5>
+<p class="western">This is a good time to introduce two testing
+concepts.  
+</p>
+<p class="western"><i>Blackbox</i><span style="font-style: normal">
+testing designs tests focusing only on the expected behavior of the
+software, without considering the design of the code itself. 
+Blackbox testing is all about the code working correctly.  </span>
+</p>
+<p class="western"><i>Whitebox</i><span style="font-style: normal">
+testing, by contrast, takes into account </span><span style="font-style: normal">the
+design of the code, and builds tests to run different parts of the
+code and confirm their correct function.</span></p>
+<p class="western"><span style="font-style: normal">C</span><span style="font-style: normal">learly,
+TDD must be blackbox testing, since we don't even have code to
+consider when writing tests.  But, in an interesting way, it's also
+whitebox testing in that well-written tests consider how the code
+*might* be written, what parts of it are likely to have errors, etc,
+even if the code does not yet exist.</span></p>
+<h3 class="western">Random Testing and Fuzzing</h3>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">Students
+often ask if generating random test data is a good idea.   Generating
+purely random test data to more rigorously test edge cases and
+unexpected inputs has been discussed and refined for decades.  It's a
+useful approach, but  only with careful design.  </font></font></font>
+</p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<h5 class="western">Limitations of Random Testing</h5>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">One
+problem with random test data is that the &quot;correct&quot; output
+for a random input is hard to determine, so random tests are most
+useful for uncovering bugs with obvious effects like segfaults.
+Random testing is thus usually done after software is implemented
+(often as a final testing phase) and seeks to cause runtime faults in
+the software as evidence of bugs, rather than comparing software
+output against a correct standard.</font></font></font></p>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; orphans: 2; widows: 2"><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Another
+problem with random data is that random input data does not imply
+uniform coverage of the code nor of software features.  Randomly
+chosen inputs often exercise the same few lines of the code,
+generally error checking.  As an example, consider what would happen
+if we randomly c</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">reated</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+a REST endpoint</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+e.g &quot;/xnqc/dkea&quot;</span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">,
+and filled the request body and query parameters with random data. 
+Virtually 100% of such tests would result in a 404 due to invalid
+endpoint, or in the rare case where we randomly happened upon a valid
+endpoint, would </span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">trigger
+a JSON parsing error on the random, and thus not JSON-compliant,
+body.</span></span></span></font></font></font></span></p>
+<p class="western" style="margin-bottom: 0in; orphans: 2; widows: 2"><br/>
+
+</p>
+<h5 class="western">Fuzzing</h5>
+<p class="western" style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<font color="#000000"><font face="Times New Roman"><font size="2" style="font-size: 11pt">A
+better approach might be to take a known good input and make small
+random changes to it, so that the random test data is mostly drawn
+from known good input.  Or, even better, choose random input
+according to a format rule, for instance randomly choosing values for
+a JSON request body according to a JSON schema that lays out the
+basic format expected in that request.   We'll talk more about this
+type of smart-random testing in the segment on <i>fuzzing</i>.  </font></font></font>
+</p>
+<h3 class="western">Levels of Testing</h3>
+<p class="western">Testing is done at different levels, each having
+its own characteristics.</p>
+<h5 class="western">Unit Testing</h5>
+<p class="western">The lowest level of testing is <i>unit testing</i><span style="font-style: normal">,
+which builds tests to check the performance of just one class,
+function, or small module in the code.  </span><span style="font-style: normal">
+Unit tests are generally simple, verifying basic functionality. 
+Their value is in finding small, obvious bugs early on, so that they
+don't clutter up higher-level testing.   You don't want to spend
+needless time tracing a problem down to some simple error in a basic
+class when it could have been uncovered by a unit test earlier.</span></p>
+<p class="western"><span style="font-style: normal">TDD places heavy
+emphasis on unit testing, in part for the reasons just stated, but
+also because unit tests help you clarify the intended function of the
+class or module before writing it.</span></p>
+<p class="western"><span style="font-style: normal">There are a great
+many libraries for unit testing, in various languages.  They
+typically require you to write small methods that perform tests, and
+then use an assertion library to verify the results of the test.  An
+automated </span><i>test driver</i><span style="font-style: normal">
+then performs all of your tests, reporting the results often in the
+form of red/green markers.</span></p>
+<h5 class="western">Integration Testing</h5>
+<p class="western">The next level of testing is <i>integration
+testing</i><span style="font-style: normal">.   Even with fully
+correct units, there will be errors in the interactions between the
+units, e.g. misunderstandings regarding expected parameter or return
+values, or regarding the order in which methods should be called.  An
+integration test covers</span><span style="font-style: normal"> a
+larger portion of the code.  Libraries for unit testing also often
+work well for integration testing.</span></p>
+<h5 class="western">Functional/System Testing</h5>
+<p class="western">Ultimately, you write tests that exercise the
+entire system, automating what a user might do.  These are termed
+<i>functional</i><span style="font-style: normal"> or </span><i>system</i><span style="font-style: normal">
+tests.  </span>
+</p>
+</body>
+</html>

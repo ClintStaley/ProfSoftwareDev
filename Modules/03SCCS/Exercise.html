@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
 	<meta name="created" content="2017-10-20T23:40:51.940000000"/>
-	<meta name="changed" content="2021-06-16T01:15:22.874948774"/>
+	<meta name="changed" content="2021-06-26T20:14:58.234215679"/>
 	<style type="text/css">
 		@page { margin: 0.79in }
 		p { margin-bottom: 0.1in; line-height: 120% }
@@ -35,7 +35,7 @@
 	Searching, Rewriting History, Reset Demystified, Credential Storage)</p>
 </ul>
 <p style="margin-bottom: 0in; line-height: 100%">1. Explore the
-existing PhysicsCompetition repo, and answer the following.  (If you
+existing PhysicsCompetition repo, and answer the following. (If you
 do this on a Unix or Gitbash commandline, you may find the wc command
 useful.):</p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
@@ -44,30 +44,29 @@ useful.):</p>
 <ul>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">How many
-	commits have been made to PhysicsCompetition?   (Note you can get a
+	commits have been made to PhysicsCompetition? (Note you can get a
 	listing of all commits, one per line.)</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">When was the
-	first?  
+	first? 
 	</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Could you
-	determine this even if your machine were not on the internet?   Why?
-	 
+	determine this even if your machine were not on the internet? Why? 
 	</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">How much
-	space is used by each commit, on average?  (The size of the .git
+	space is used by each commit, on average? (The size of the .git
 	directory, divided by number of commits, would be a good way to
-	estimate this.)  Does Git really store each commit in its entirety?</p>
+	estimate this.) Does Git really store each commit in its entirety?</p>
 </ul>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
 <p style="margin-bottom: 0in; line-height: 100%">2. Git often uses
-7-letter hashcode prefixes to identify a commit.   Is this
-potentially ambiguous?  What are the odds that two commits might have
-the same 7-letter prefix?</p>
+7-letter hashcode prefixes to identify a commit. Is this potentially
+ambiguous? What are the odds that two commits might have the same
+7-letter prefix?</p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
@@ -78,14 +77,14 @@ when competing edits apply to a binary file, e.g. a word doc?</p>
 </p>
 <p style="margin-bottom: 0in; line-height: 100%">4. Does git force a
 hand-merge when two different commits edit the same file, or can the
-merge be automatic if the edits are not overlapping?  Test to find
-out how close two edits can be and still result in automatic merge.</p>
+merge be automatic if the edits are not overlapping? Test to find out
+how close two edits can be and still result in automatic merge.</p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
-<p style="margin-bottom: 0in; line-height: 100%">5. A commit &quot;ome
-fix comments&quot; was made early in the history of the project.  
-What files/lines did it change?   Why?</p>
+<p style="margin-bottom: 0in; line-height: 100%">5. A commit &quot;some
+fix comments&quot; was made early in the history of the project. What
+files/lines did it change? Why?</p>
 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
@@ -106,21 +105,21 @@ Git exercise, logging the commands you ran as a document to submit:</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Clone
 	GitExercise onto your local machine, but do not incorporate your
-	password into the remote URL.  Instead, set up a credential cache
-	system using <i>git config --global</i><span style="font-style: normal">
-	to set a credential.helper property.  </span><span style="font-style: normal">
-	(See Credential Storage in the Git text.) </span><span style="font-style: normal">
-	Set it for 1 hour timeout, and confirm that you only need to enter
-	your password once per hour.</span></p>
+	password into the remote URL. Instead, set up a credential cache
+	system using <i>git config --global</i><span style="font-variant: normal">
+	</span><span style="font-variant: normal"><span style="font-style: normal">to
+	set a credential.helper property. (See Credential Storage in the Git
+	text.) Set it for 1 hour timeout, and confirm that you only need to
+	enter your password once per hour.</span></span></p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Copy the
 	contents of the Maven project you did in an earlier assignment into
-	GitExercise.  We'll use it as a small app to manage via Git.</p>
+	GitExercise. We'll use it as a small app to manage via Git.</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Set up git so
 	it ignores the entire target directory, plus any directory named
-	&quot;Archive&quot; anywhere in the tree.  Create an Archive
-	directory under src and put a small file in it.  
+	&quot;Archive&quot; anywhere in the tree. Create an Archive
+	directory under src and put a small file in it. 
 	</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">With a single
@@ -139,7 +138,7 @@ Git exercise, logging the commands you ran as a document to submit:</p>
 	text.</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Use git
-	branch to create a new branch SampleMod.  Check out the branch</p>
+	branch to create a new branch SampleMod. Check out the branch</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">In SampleMod,
 	change line 10 of Sample and commit the change.</p>
@@ -153,7 +152,7 @@ Git exercise, logging the commands you ran as a document to submit:</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">In SampleMod,
 	use git diff to find the difference between your most recent commit
-	and that before it.   Find a couple of different ways to describe
+	and that before it. Find a couple of different ways to describe
 	those two commits in your diff command.</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Use git diff
@@ -182,15 +181,15 @@ Git exercise, logging the commands you ran as a document to submit:</p>
 	Sample from the repository.</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Modify Sample
-	by adding one line, and add it to the staging area.  Confirm you did
+	by adding one line, and add it to the staging area. Confirm you did
 	so via git status</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Remove the
 	modified Sample from the staging area, retaining the modification in
-	your working tree only.  (What level of &quot;reset&quot; is this?)</p>
+	your working tree only. (What level of &quot;reset&quot; is this?)</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Now add and
-	commit the modified Sample.  Confirm this via git status and git log</p>
+	commit the modified Sample. Confirm this via git status and git log</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Now, get rid
 	of that last commit entirely, returning exactly to the pre-commit
@@ -201,47 +200,120 @@ Git exercise, logging the commands you ran as a document to submit:</p>
 	<li/>
 <p style="margin-bottom: 0in; line-height: 100%">Now, undo
 	that commit, <i>including reverting your working tree to the state
-	before step 22. </i><span style="font-style: normal">Check that this
-	has happened by examining Sample and git log</span></p>
+	before step 22. </i><span style="font-variant: normal"><span style="font-style: normal">Check
+	that this has happened by examining Sample and git log</span></span></p>
 	<li/>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
 	And, finally, bring back the reverted commit, including your working
 	tree, using git reset only.</p>
 	<li/>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
 	Push all this work to github.</p>
 </ol>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%"><br/>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">6.
-Do this Git exercise, logging the commands you ran as a document to
-submit:</p>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%"><br/>
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
+6. Do this Git exercise, logging the commands you ran as a document
+to submit:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
 <ol>
 	<li/>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
 	Fork the ClintStaley/GitExercise repository on GitHub</p>
 	<li/>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
 	Clone your fork, and create a branch with your login name, e.g.
 	&quot;ClintStaley&quot;</p>
 	<li/>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
 	In that branch, add to the end of src/Sample your name and commit</p>
 	<li/>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
 	Make a pull request for me to process.</p>
 	<li/>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%">
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
 	Pair up with a fellow student, and invite one another to your
-	respective GitExercise repos.  Each of you do the process above, and
+	respective GitExercise repos. Each of you do the process above, and
 	then process the respective pull requests, so you know what it's
 	like to work a pull request from the receiving end.</p>
 </ol>
-<p style="margin-bottom: 0in; font-style: normal; line-height: 100%"><br/>
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; font-style: normal; line-height: 100%">
+7. Assume that your upstream repository &quot;origin&quot; has
+branches &quot;master&quot;, &quot;issue1&quot;, and &quot;issue2&quot;
+and no others.  You have the same branches in your local repository
+and they are up to date with the upstream repo as you start.  Answer
+the following questions:</p>
+<ul>
+	<p style="margin-bottom: 0in; line-height: 100%"></p>
+</ul>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-variant: normal"><span style="font-style: normal">Two
+	coworkers make and push updates to issue1 </span></span><span style="font-variant: normal"><span style="font-style: normal">(2
+	commits) </span></span><span style="font-variant: normal"><span style="font-style: normal">and
+	issue2</span></span><span style="font-variant: normal"><span style="font-style: normal">
+	(3 commits)</span></span><span style="font-variant: normal"><span style="font-style: normal">.
+	 You have made no changes to these in your local branches.  You run
+	</span></span><span style="font-variant: normal"><i>git fetch
+	origin</i></span><span style="font-variant: normal"><span style="font-style: normal">.
+	 </span></span><span style="font-variant: normal"><span style="font-style: normal">How
+	many commits does this add to your local repository? </span></span><span style="font-variant: normal"><span style="font-style: normal">
+	If you run </span></span><span style="font-variant: normal"><i>git
+	branch -a</i></span><span style="font-variant: normal"><span style="font-style: normal">
+	how many branches will you see locally and what will they be?</span></span></p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-variant: normal"><span style="font-style: normal">What
+	commands will u</span></span><span style="font-variant: normal"><span style="font-style: normal">pdate
+	your </span></span><span style="font-variant: normal"><span style="font-style: normal">local
+	issue1 and issue2 branches to include the changes that were made</span></span><span style="font-variant: normal"><span style="font-style: normal">
+	to origin</span></span><span style="font-variant: normal"><span style="font-style: normal">,
+	</span></span><span style="font-variant: normal"><i>without
+	accessing origin itself?  </i></span><span style="font-variant: normal"><span style="font-style: normal">What
+	kind of merge will result?  How many new commits do these commands
+	add to your local repository?  Why?  </span></span>
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-variant: normal"><span style="font-style: normal">You
+	now make your own changes to issue1 and issue2.  What *single*
+	command will send all your changes to origin for others to access? 
+	Does that command alter any other branches </span></span><span style="font-variant: normal"><i>locally?
+	 </i></span><span style="font-variant: normal"><span style="font-style: normal">How
+	many commits does it add, if any, to your local repository?</span></span></p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-variant: normal"><span style="font-style: normal">A
+	coworker creates a new branch &quot;issue3&quot; from &quot;master&quot;
+	and pushes it to origin, with no actual changes made to the branch
+	yet.  You run </span></span><span style="font-variant: normal"><i>get
+	fetch origin </i></span><span style="font-variant: normal"><span style="font-style: normal">to
+	obtain it. How many branches are added to your local repository as a
+	result?  How many commits?</span></span></p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-variant: normal"><span style="font-style: normal">You
+	want to work locally on &quot;issue3&quot;.  What command do you
+	execute so that you can do commits to your local issue3 copy?  How
+	many branches does this add?  How many commits?</span></span></p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><span style="font-variant: normal"><span style="font-style: normal">You
+	make a couple of local commits to issue3, and would like to do a
+	diff betwen your latest issue3 branch and origin's copy of issue3. 
+	Assuming no one else has pushed changes to issue3 on origin, you can
+	make this check without actually consulting origin or using commit
+	hashcodes.  What command will do so?</span></span></p>
+</ol>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<ol start="6">
+	<p style="margin-bottom: 0in; line-height: 100%"></p>
+</ol>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
 
 </p>
 </body>

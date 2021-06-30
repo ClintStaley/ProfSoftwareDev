@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-06-30T01:01:02.447192836"/>
+	<style type="text/css">
+		p { margin-bottom: 0.2in; page-break-before: auto; page-break-after: auto }
+		p.western { font-size: 11pt }
+		h1 { margin-top: 0in; margin-bottom: 0in; text-align: center }
+		h3 { margin-top: 0.17in; margin-bottom: 0.1in }
+		h3.western { font-family: "Albany", sans-serif }
+		h3.cjk { font-family: "HG Mincho Light J" }
+		h3.ctl { font-family: "Arial Unicode MS" }
+		a:link { color: #0000ff }
+		a:visited { color: #800080 }
+	</style>
+</head>
+<body lang="en-US" link="#0000ff" vlink="#800080" dir="ltr">
+<h1 style="margin-bottom: 0.2in">Measuring Test Effectiveness</h1>
+<h3 class="western">Overview</h3>
+<p class="western">Objective measures of test effectiveness are hard
+to come by. Famously, one can prove the presence of bugs, but cannot
+conclusively prove their absence. Thus any means of measuring code
+correctness, even approximate, is valuable.</p>
+<h3 class="western">Code Coverage</h3>
+<p class="western">By far the most common test-effectiveness measure
+in practice is <i>code coverage</i><span style="font-variant: normal"><span style="font-style: normal">,
+which simply measures how many lines of the code are executed even
+once by the test suite. </span></span><span style="font-variant: normal"><span style="font-style: normal">
+ (Code coverage is part of whitebox testing, of course, since it
+examines the source as part of the testing process.)</span></span></p>
+<p class="western"><span style="font-variant: normal"><span style="font-style: normal">One
+might think that any reasonably complete test suite would at least
+execute each line of the code one or more times, but even a carefully
+written test suite can miss a significant percentage of lines,
+especially infrequently used special cases. It's perfectly possible
+for production code to be released with 5-10% of its lines never
+having been executed at all. Executing every line in the code base is
+thus a recognized baseline for good tests. </span></span>
+</p>
+<p class="western"><span style="font-variant: normal"><span style="font-style: normal">Tools
+to measure code coverage abound. They typically augment the code
+under test by invisibly adding output code after each source line,
+resulting in a log file showing which lines were executed and in
+which order. Reporting tools then offer a summary of percentage of
+code coverage, and lists of lines missed.</span></span><span style="font-variant: normal">
+</span><span style="font-variant: normal"><span style="font-style: normal">An
+obvious use of such data is to improve test cases to cover missing
+lines. But an added, and equally important benefit is that missed
+lines often uncover code weaknesses, such as unreachable lines,
+senseless error checks, duplicate lines, etc. Passing code through a
+coverage tool is good discipline, and is common practice in well-run
+industrial shops.</span></span></p>
+<h3 class="western" style="font-variant: normal; font-style: normal">Path
+Coverage</h3>
+<p class="western"><span style="font-variant: normal"><span style="font-style: normal">But,</span></span><span style="font-variant: normal">
+</span><span style="font-variant: normal"><span style="font-style: normal">note
+that 100% code coverage still does not ensure perfect tests. The</span></span><span style="font-variant: normal">
+</span><span style="font-variant: normal"><span style="font-style: normal">higher
+standard of </span></span><span style="font-variant: normal"><i>path
+coverage</i></span><span style="font-variant: normal"> </span><span style="font-variant: normal"><span style="font-style: normal">comes</span></span><span style="font-variant: normal">
+</span><span style="font-variant: normal"><span style="font-style: normal">closer
+to such a goal. Path coverage measures how many different </span></span><span style="font-variant: normal"><span style="font-style: normal"><b>paths</b></span></span><span style="font-variant: normal">
+</span><span style="font-variant: normal"><span style="font-style: normal">of
+execution are tested. For instance, a sequence of four if-else
+statements, one after another, offers 16 different execution paths,
+since each added if-else choice doubles the possible execution paths.
+100% path coverage would execute all 16 of these, and would do so in
+combination with all other path possibilities for the entire program.
+Any serious program has an astronomical number of paths, so path
+coverage remains principally an academic concept, with few if any
+production tools available to measure it. </span></span>
+</p>
+<h3 class="western" style="font-variant: normal; font-style: normal">Bug
+Salting</h3>
+<p class="western"><span style="font-variant: normal"><span style="font-style: normal">An
+interesting and perhaps underused approach for measuring test
+effectiveness is what we might call </span></span><span style="font-variant: normal"><i>bug
+salting</i></span><span style="font-variant: normal"><span style="font-style: normal">.
+(The method has no widely accepted name.) This involves deliberately
+adding bugs &quot;salt bugs&quot; into the system, and recording
+their location for later removal. If the salt bugs are
+representative, then the percentage of salt bugs undetected by
+testing is a fair measure of the percentage of true bugs that remain.
+(Bugs detected during code writing, especially nonobvious ones, are a
+good source of &quot;representative&quot; salt bugs.)</span></span></p>
+<p class="western" style="font-variant: normal; font-style: normal">The
+author has used this method with moderate success, but it requires a
+good bit of administrative energy to implement. Intentionally adding
+bugs goes against the grain for most software developers.</p>
+<h3 class="western">Formal Proof of Correctness</h3>
+<p class="western">A complete discussion of measuring test
+effectiveness should include the concept of <i>formal proof of
+correctness</i> or <i>formal verification</i><span style="font-variant: normal"><span style="font-style: normal">.
+</span></span>Beginning in the 1970s, various research efforts have
+tried to provide a general means of mathematically proving that a
+program is correct. The details of formal verification are beyond the
+scope of this lecture, but a typical system includes a compiler that
+allows formal &quot;assertions&quot; to be inserted in the code (much
+as one might with a standard assert statement, but with much richer
+logic, and with much greater frequency). The compiler then uses prior
+assertions, plus known mathematical of the subsequent lines of code,
+to prove that later assertions are mathematically guaranteed to be
+correct. Any failure of this proof requires revision of the code, or
+addition of clearer assertions by the programmer, until the entire
+program can be formally proved correct.</p>
+<p class="western">This is obviously an expensive and highly
+theoretical exercise, but it does on occasion see industrial use.
+Chip designers in particular use formal verification to find errors
+in designs before production, and various operating system kernels
+have been formally verified as correct. The expertise and tools for
+such efforts are rare and specialized, so formal verification (thus
+far) is not used widely in software.</p>
+<h3 class="western"><br/>
+<br/>
+
+</h3>
+<p class="western"><br/>
+<br/>
+
+</p>
+</body>
+</html>

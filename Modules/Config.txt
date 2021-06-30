@@ -42,3 +42,15 @@ Module CodeReading 02CodeReading N/A N/A
      end
   end
 end
+
+Module Testing 04Testing N/A N/A
+  Topic Principles 0Principles 10
+    Segment 6/30 10 nl end
+  end
+  Topic Effectiveness 2EffectivenessMeasures 10 
+    Segment 6/30 10 nl end
+  end
+  Topic Fuzzing 3Fuzzing 10 
+    Segment 6/30 10 nl end
+  end
+end

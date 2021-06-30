@@ -1,9 +1,0 @@
-Set up standard layout
-Manage gitignore
-
-
-git status
-git diff
-
-gitexercises.fracz.com ?
-

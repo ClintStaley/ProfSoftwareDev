@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="2021-06-29T19:11:40.332645125"/>
+	<meta name="changed" content="2021-06-30T03:13:47.024640769"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115% }
+		h5.western { font-family: "Liberation Sans", sans-serif; font-size: 11pt }
+		h5.cjk { font-family: "Noto Sans CJK SC"; font-size: 11pt }
+		h5.ctl { font-family: "Lohit Devanagari"; font-size: 11pt }
+		h1 { margin-bottom: 0.08in }
+		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt }
+		h1.cjk { font-family: "Noto Sans CJK SC"; font-size: 18pt }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 18pt }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<h1 class="western">Fuzzing</h1>
+<p>Fuzzing is an important,and relatively recent (21st century)
+development in automated testing.  It can roughly be described as
+smart random testing.  I'll briefly review fuzzing here, and then ask
+you to read the online materials below, which give a good overview of
+the concept and its history.</p>
+<h5 class="western">Blackbox fuzzing</h5>
+<p>The term <i>fuzzing</i><span style="font-style: normal"> comes
+from an early form of &quot;smart random testing&quot; in which
+selected valid inputs were modified slightly, by altering a few of
+their bytes to random values.  This &quot;fuzzes&quot; the input by
+making it slightly different from the original.  Altering a model
+input slightly is more likely to uncover interesting bugs than simply
+presenting the software with completely random input data.  The
+latter, as discussed in the overview, typically triggers the same
+sorts of bugs over and over.  </span>
+</p>
+<p><span style="font-style: normal">This early form of testing is now
+termed </span><i>blackbox fuzzing</i><span style="font-style: normal">
+since it doesn't take any aspects of the input or code structure into
+account.</span></p>
+<p><b><span style="font-style: normal">Grammar-based fuzzing</span></b></p>
+<p style="font-weight: normal"><i>Grammar-based fuzzing</i><span style="font-style: normal">
+takes intelligent random testing a step further, by taking into
+account the overall expected form of the input, and generating random
+inputs </span><span style="font-style: normal"><b>that follow that
+form</b></span><i><b>.  </b></i><span style="font-style: normal">Examples
+might include generating random JSON HTTP request bodies based on a
+JSON scheme describing the expected body, or </span><span style="font-style: normal">generating
+JPEG files that are structurally correct but have random field values
+to test a JPEG reader.</span></p>
+<p><b><span style="font-style: normal">Whitebox fuzzing</span></b></p>
+<p style="font-weight: normal"><i>Whitebox fuzzing</i><span style="font-style: normal">
+is the most complex form, and is a relatively recent development. 
+This method builds on grammar-based fuzzing, but uses sophisticated
+programming language analysis tools to find ways to fuzz the input so
+that different paths through the program are executed with each
+different input.</span></p>
+<h5 class="western">Principal uses of fuzzing</h5>
+<p>Fuzzing, like any random testing system, can only find bugs that
+result in runtime crashes or other obvious errors like endless loops
+or unreasonably large outputs.  It turns out, however, that there is
+a particular group of &quot;users&quot; that spend a good bit of time
+presenting unexpected inputs to programs in order to crash them, and
+in doing so find security vulnerabilities.  These would be black-hat
+hackers.</p>
+<p>So, the &quot;killer app&quot; of fuzzing turns out to be
+security-vulnerability testing, and fuzzing is typically applied near
+the end of testing, for this purpose.</p>
+<h5 class="western">Readings</h5>
+<p>Here are the readings to do, in recommended order.</p>
+<p>First, a brief one-page intro</p>
+<p><a href="https://www.microsoft.com/en-us/research/blog/a-brief-introduction-to-fuzzing-and-why-its-an-important-tool-for-developers/">MS
+Research Fuzzing Overview</a></p>
+<p>Second, a CACM tutoring on the subject, by one of its leading
+researchers.</p>
+<p><a href="ttps://patricegodefroid.github.io/public_psfiles/Fuzzing-101-CACM2020.pdf">CACM
+Tutorial by Godefroid</a></p>
+<p>Finally, a CACM professional paper summarizing recent developments
+in fuzzing, particularly whitebox fuzzing.</p>
+<p><a href="https://patricegodefroid.github.io/public_psfiles/cacm2012.pdf"><i>CACM
+Professional Paper</i></a></p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; orphans: 2; widows: 2">
+<br/>
+
+</p>
+</body>
+</html>
